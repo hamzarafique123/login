@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">login</string>
+    <string name="title_activity_main">login</string>
+    <string name="package_name">com.login.project</string>
+    <string name="custom_url_scheme">com.login.project</string>
+    <string name="server_client_id">737088378705-0c5g4o71nfice1hcpvfkdctdt1g6n14q.apps.googleusercontent.com</string>
+</resources>

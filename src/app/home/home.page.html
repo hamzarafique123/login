@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Google Auth
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button expand="full" (click)="signIn()" *ngIf="!user && !loading">
+    <ion-icon name="logo-google" slot="start"></ion-icon>
+    Sign in with Google
+  </ion-button>
+
+  <!-- Loading indicator -->
+  <ion-spinner *ngIf="loading"></ion-spinner>
+
+  <!-- Profile Display Section -->
+  <div *ngIf="user">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ user.name }}</ion-card-title>
+        <ion-card-subtitle>{{ user.email }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="user.imageUrl" alt="Profile Picture" *ngIf="user.imageUrl">
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="full" (click)="refresh()">Try refresh</ion-button>
+    <ion-button expand="full" (click)="signOut()">Sign Out</ion-button>
+  </div>
+</ion-content>
